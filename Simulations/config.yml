@@ -1,0 +1,64 @@
+cooperative_caching:
+  cache_to_cache_latency: 10
+  cache_to_sp_latency: 30
+  enabled: true
+  user_to_cache_latency: 5
+manual_allocation:
+  allocation:
+  - 10
+  - 10
+  - 10
+  enabled: true
+output:
+  figures_dir: figures
+  network_enabled: true
+  results_dir: results
+  save_allocations: false
+  save_results: true
+providers:
+  cacheability:
+  - 0.8
+  - 0.8
+  - 0.8
+  count: 3
+  probabilities:
+  - 0.5
+  - 0.3
+  - 0.2
+  zipf_alphas:
+  - 1.0
+  - 0.8
+  - 0.6
+rl:
+  activate_memory: true
+  alpha: 0.3
+  alpha_scheduling: true
+  epsilon: 0.3
+  epsilon_decay: true
+  fixed_seed: true
+  gamma: 0.99
+simulation:
+  D:
+  - 1
+  delta: 100
+  delta_decay: 0.99
+  interval_size: 1
+  method:
+  - Q_learning
+  - SCA_ADMM
+  - SCA_neighborhood_search
+  - global_opt_allocation
+  - best_allocation
+  - equal_allocation
+  - proportional_allocation
+  - cooperative_best_allocation
+  min_delta: 5
+  nb_videos: 10000
+  request_rate: 100
+  single_cache_capacity: 40
+  time: 200
+topology:
+  cache_nodes_ratio: 0.4
+  parameters:
+    delay: 1
+  type: GEANT

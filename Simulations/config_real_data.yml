@@ -1,0 +1,74 @@
+cooperative_caching:
+  cache_to_cache_latency: 10
+  cache_to_sp_latency: 30
+  enabled: true
+  user_to_cache_latency: 5
+manual_allocation:
+  allocation:
+  - 10
+  - 10
+  - 10
+  enabled: true
+output:
+  figures_dir: figures_real_data
+  network_enabled: true
+  results_dir: results_real_data
+  save_allocations: true
+  save_results: true
+providers:
+  cacheability:
+  - 0.8
+  - 0.8
+  - 0.8
+  count: 3
+  probabilities:
+  - 0.73
+  - 0.2
+  - 0.07
+  zipf_alphas:
+  - 1.0
+  - 0.8
+  - 0.6
+real_data:
+  dataset_dir: datasets
+  enabled: true
+  requests_per_interval: 100
+  data_ratio: 0.01
+  sp_files:
+    douyin: douyin-request.txt
+    netflix: netflix-request.txt
+    youtube: youtube-request.txt
+  sp_names:
+  - youtube
+  - netflix
+  - douyin
+  total_intervals: 20000
+rl:
+  activate_memory: true
+  alpha: 0.3
+  alpha_scheduling: true
+  epsilon: 0.3
+  epsilon_decay: true
+  fixed_seed: false
+  gamma: 0.99
+simulation:
+  D:
+  - 1
+  delta: 100
+  delta_decay: 0.99
+  debug: false
+  interval_size: 1
+  method:
+  - SCA_ADMM
+  - SCA_neighborhood_search
+  - Q_learning
+  min_delta: 5
+  nb_videos: 10000
+  request_rate: 100
+  single_cache_capacity: 80
+  time: 200
+topology:
+  cache_nodes_ratio: 0.8
+  parameters:
+    delay: 1
+  type: GEANT

@@ -1,0 +1,6 @@
+manual_allocation:
+  allocation:
+  - 15
+  - 10
+  - 5
+  enabled: true

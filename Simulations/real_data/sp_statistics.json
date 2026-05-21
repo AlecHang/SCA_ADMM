@@ -1,0 +1,20 @@
+{
+  "youtube": {
+    "original_total_requests": 1467700,
+    "total_requests": 14677,
+    "unique_contents": 13834,
+    "ratio_used": 0.01
+  },
+  "netflix": {
+    "original_total_requests": 406761,
+    "total_requests": 4068,
+    "unique_contents": 1857,
+    "ratio_used": 0.01
+  },
+  "douyin": {
+    "original_total_requests": 125539,
+    "total_requests": 1255,
+    "unique_contents": 1254,
+    "ratio_used": 0.01
+  }
+}
